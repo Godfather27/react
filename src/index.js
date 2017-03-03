@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-import {List, AddUser} from './User'
+import {List, AddUser, Person} from './User.js'
 
 class App extends React.Component {
   constructor() {

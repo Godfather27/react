@@ -19,4 +19,4 @@ Person.propTypes = {
   name: React.PropTypes.string
 }
 
-export default {List, AddUser, Person}
+export {List, AddUser, Person}
