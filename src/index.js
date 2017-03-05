@@ -7,34 +7,40 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      entries: ['Stefanie', 'Sepp', 'Alex'],
+      entries: [
+        { id: 0, name: 'Stefanie' },
+        { id: 1, name: 'Sepp' },
+        { id: 2, name: 'Alex' }
+      ],
       currentName: '',
       activePerson: null
     }
   }
 
-  filtered = () => this.state.entries.filter((e) => e.includes(this.state.currentName))
+  filtered = () => this.state.entries.filter(e => e.name.includes(this.state.currentName))
   addPerson = () => {
+    let newEntry = {
+      id: this.state.entries[this.state.entries.length - 1].id + 1,
+      name: this.state.currentName
+    }
     this.setState({
-      entries: [...this.state.entries, this.state.currentName],
-      newName: ''
+      entries: [...this.state.entries, newEntry],
+      currentName: ''
     })
   }
-  removePerson = (idx) => {
+  removePerson = (id) => {
     this.setState({
-      entries: this.state.entries.filter((e, i) => i !== idx)
+      entries: this.state.entries.filter((e) => e.id !== id)
     })
   }
-  updateName = (idx, e) => {
+  updateName = (id, e) => {
     this.setState({
-      entries: this.state.entries.map((v, i) => {
-        return i === idx ? e.target.value : v
-      })
+      entries: this.state.entries.map(v => v.id === id ? {id: v.id, name: e.target.value} : v)
     })
   }
-  setActivePerson = (idx, e) => {
+  setActivePerson = (id, e) => {
     this.setState({
-      activePerson: idx
+      activePerson: id
     })
   }
   changeCurrentName = (e)=> this.setState({currentName: e.target.value})
@@ -43,7 +49,7 @@ class App extends React.Component {
     return <div>
       <h1>Welcome</h1>
       <AddUser
-        value={this.state.newName}
+        currentName={this.state.currentName}
         changeCurrentName={this.changeCurrentName}
         addPerson={this.addPerson}
         setActivePerson={this.setActivePerson}

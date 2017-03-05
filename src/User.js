@@ -11,13 +11,12 @@ const AddUser = ({currentName, changeCurrentName, addPerson, setActivePerson}) =
 const List = ({entries, removePerson, updateName, activePerson, setActivePerson}) => {
   return <div>
       {
-        entries.map((entry, index) => {
+        entries.map((entry) => {
           return <Person
-              key={index}
-              name={entry}
-              removePerson={removePerson.bind(this, index)}
-              updateName={updateName.bind(this, index)}
-              index={index}
+              key={entry.id}
+              entry={entry}
+              removePerson={removePerson.bind(this, entry.id)}
+              updateName={updateName.bind(this, entry.id)}
               activePerson={activePerson}
               setActivePerson={setActivePerson}
             />
@@ -26,20 +25,20 @@ const List = ({entries, removePerson, updateName, activePerson, setActivePerson}
     </div>
 }
 
-const NameDisplay = ({updateName, name, activePerson, index, setActivePerson}) => {
-  if(activePerson === index)
+const NameDisplay = ({updateName, name, activePerson, id, setActivePerson}) => {
+  if(activePerson === id)
     return <input type="text" onChange={updateName} value={name}/>
   else
-    return <p onClick={setActivePerson.bind(this, index)}>{name}</p>
+    return <p onClick={setActivePerson.bind(this, id)}>{name}</p>
 }
 
-const Person = ({name, removePerson, updateName, activePerson, index, setActivePerson}) => {
+const Person = ({entry, removePerson, updateName, activePerson, setActivePerson}) => {
   return <div className="person">
       <NameDisplay
         updateName={updateName}
-        name={name}
+        name={entry.name}
         activePerson={activePerson}
-        index={index}
+        id={entry.id}
         setActivePerson={setActivePerson}
       />
       <input
