@@ -2,7 +2,13 @@ import React from 'react';
 
 const AddUser = ({currentName, changeCurrentName, addPerson, setActivePerson}) => {
   return <div className="add-user" onClick={setActivePerson.bind(this, null)}>
-      <input className="pull-left" value={currentName} onChange={changeCurrentName} type="text" />
+      <input
+        className="pull-left"
+        value={currentName}
+        onChange={changeCurrentName}
+        type="text"
+        onKeyUp={addPerson}
+      />
       <input type="button" onClick={addPerson} value="+"/>
     </div>
 }

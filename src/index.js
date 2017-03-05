@@ -18,7 +18,9 @@ class App extends React.Component {
   }
 
   filtered = () => this.state.entries.filter(e => e.name.includes(this.state.currentName))
-  addPerson = () => {
+  addPerson = (e) => {
+    if(!(e.nativeEvent.key === "Enter" || e.nativeEvent.type === "click"))
+      return
     let newEntry = {
       id: this.state.entries[this.state.entries.length - 1].id + 1,
       name: this.state.currentName

@@ -9,7 +9,7 @@ html {
 
 #root {
   margin: 50px auto;
-  width: 250px;
+  width: 500px;
 }
 
 h1 {
@@ -34,7 +34,7 @@ input[type=button]{
 .add-user {
   height: 40px;
   margin-bottom: 1px;
-  width: 250px;
+  width: 500px;
 }
 
 .add-user > * {
@@ -46,7 +46,7 @@ input[type=button]{
   border-radius: 2px;
   background: #b5cfe8;
   margin-bottom: 1px;
-  width: 250px;
+  width: 500px;
   color: #050c2b;
 }
 
