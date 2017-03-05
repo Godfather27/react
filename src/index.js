@@ -62,7 +62,7 @@ class App extends React.Component {
 
   render(){
     return <div>
-      <h1>Welcome to react</h1>
+      <h1>Personenverzeichnis</h1>
       <AddUser
         currentName={this.state.currentName}
         changeCurrentName={this.changeCurrentName}

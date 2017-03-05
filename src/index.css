@@ -1,6 +1,7 @@
-html {
+html, body{
   font-family: Arial, sans-serif;
   font-size: 12px;
+  background: url(../public/017aed91.png);
 }
 
 *, * > * {
@@ -34,7 +35,7 @@ input[type=button]{
 
 .add-user {
   height: 40px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   width: 500px;
 }
 
@@ -46,7 +47,7 @@ input[type=button]{
   height: 40px;
   border-radius: 2px;
   background: #daeaf9;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   width: 500px;
   color: #050c2b;
 }
