@@ -26,7 +26,11 @@ class App extends React.Component {
     }
   }
 
-  filtered = () => this.state.entries.filter(e => e.name.includes(this.state.currentName))
+  filtered = () => {
+    return this.state.entries.filter(e => {
+      return e.name.toLowerCase().includes(this.state.currentName.toLowerCase())
+    })
+  }
   addPerson = (e) => {
     if(!(e.nativeEvent.key === "Enter" || e.nativeEvent.type === "click"))
       return
