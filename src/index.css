@@ -58,13 +58,16 @@ input[type=button]{
 }
 .person input[type=text]{
   height: 100%;
-  width: 75%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #b5cfe8;
 }
 
 .person:hover input[type=button]{
   display: block;
+}
+.person:hover input[type=text]{
+  width: 75%;
 }
 
 .pull-right{
