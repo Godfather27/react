@@ -29,6 +29,7 @@ input[type=button]{
   width: 25%;
   background: #00c738;
   border-radius: 0 2px 2px 0;
+  cursor: pointer;
 }
 
 .add-user {
