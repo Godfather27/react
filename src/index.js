@@ -47,7 +47,7 @@ class App extends React.Component {
 
   render(){
     return <div>
-      <h1>Welcome</h1>
+      <h1>Welcome to react</h1>
       <AddUser
         currentName={this.state.currentName}
         changeCurrentName={this.changeCurrentName}
