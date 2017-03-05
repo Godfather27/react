@@ -1,16 +1,25 @@
 import React from 'react';
 
-const AddUser = ({currentName, changeCurrentName, addPerson, setActivePerson}) => {
-  return <div className="add-user" onClick={setActivePerson.bind(this, null)}>
-      <input
-        className="pull-left"
-        value={currentName}
-        onChange={changeCurrentName}
-        type="text"
-        onKeyUp={addPerson}
-      />
-      <input type="button" onClick={addPerson} value="+"/>
+const AddUser = ({currentName, changeCurrentName, addPerson, setActivePerson, removeFilter}) => {
+  return <div>
+      <div className="add-user" onClick={setActivePerson.bind(this, null)}>
+        <input
+          className="pull-left"
+          value={currentName}
+          onChange={changeCurrentName}
+          type="text"
+          onKeyUp={addPerson}
+        />
+        <input type="button" onClick={addPerson} value="+"/>
+      </div>
+      <DeleteFilter currentName={currentName} removeFilter={removeFilter}/>
     </div>
+}
+
+const DeleteFilter = ({removeFilter, currentName}) => {
+  if (currentName !== "")
+    return <div className="remove-filter" onClick={removeFilter}>remove filter (x)</div>
+  return null
 }
 
 const List = ({entries, removePerson, updateName, activePerson, setActivePerson}) => {
