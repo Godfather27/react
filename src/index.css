@@ -1,3 +1,71 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+*, * > * {
+  box-sizing: border-box;
+}
+
+input[type=text]{
+  padding: 10px;
+  width: 75%;
+  height: 40px;
+  border-radius: 2px 0 0 2px;
+  border-right: none;
+}
+
+input[type=button]{
+  height: 40px;
+  width: 25%;
+  background: #00c738;
+  border-radius: 0 2px 2px 0;
+}
+
+.add-user {
+  height: 40px;
+  margin-bottom: 1px;
+  width: 250px;
+}
+
+.add-user > * {
+  border: 1px solid #000;
+}
+
 .person {
-  color: red;
+  height: 40px;
+  border-radius: 2px;
+  background: #b5cfe8;
+  margin-bottom: 1px;
+  width: 250px;
+  color: #050c2b;
+}
+
+.person p {
+  padding: 10px;
+  width: 66.6666%;
+  display: block;
+  float: left;
+  margin: 0;
+}
+
+.person > input[type=button]{
+  background: red;
+  border-radius: 0 2px  2px 0;
+  border-left: none;
+  border: 1px solid #000;
+}
+.person input[type=text]{
+  height: 100%;
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #b5cfe8;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
 }
