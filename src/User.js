@@ -1,5 +1,4 @@
 import React from 'react';
-// const log = console.log
 
 const AddUser = ({currentName, changeCurrentName, addPerson, setActivePerson}) => {
   return <div className="add-user" onClick={setActivePerson.bind(this, null)}>

@@ -28,7 +28,7 @@ class App extends React.Component {
       currentName: ''
     })
   }
-  removePerson = (id) => {
+  removePerson = id => {
     this.setState({
       entries: this.state.entries.filter((e) => e.id !== id)
     })
@@ -43,7 +43,7 @@ class App extends React.Component {
       activePerson: id
     })
   }
-  changeCurrentName = (e)=> this.setState({currentName: e.target.value})
+  changeCurrentName = e => this.setState({currentName: e.target.value})
 
   render(){
     return <div>
