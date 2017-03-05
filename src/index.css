@@ -45,7 +45,7 @@ input[type=button]{
 .person {
   height: 40px;
   border-radius: 2px;
-  background: #b5cfe8;
+  background: #daeaf9;
   margin-bottom: 1px;
   width: 500px;
   color: #050c2b;
@@ -70,7 +70,7 @@ input[type=button]{
   height: 100%;
   width: 100%;
   padding: 10px;
-  border: 1px solid #b5cfe8;
+  border: 1px solid #daeaf9;
 }
 
 .person:hover input[type=button]{
